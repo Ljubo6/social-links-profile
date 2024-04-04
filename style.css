@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    /*color*/
+    /*Primary*/
+    --green: hsl(75, 94%, 57%);
+
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 20%);
+    --dark-gray: hsl(0, 0%, 12%);
+    --of-black: hsl(0, 0%, 8%);
+
+    /*typography*/
+    --family: "Inter", sans-serif;
+    --fs-base: 14px;
+    --heding:24px;
+
+    --weight-normal:400;
+    --weight-semi-bold:600;
+    --weight-bold:700;
+
+    /*borders*/
+    --radii-card:12px;
+    --radii-links:8px;
+}
+body{
+    margin: 0;
+    font-family: var(--family);
+    font-size: var(--fs-base);
+    background-color: var(--of-black);
+    color: var(--white);
+}
+.container{
+    min-height: 100vh;
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 327px;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: var(--radii-card);
+    background-color: var(--dark-gray);
+}
+.profile-pic{
+    width: 88px;
+    height: 88px;
+}
+.picture{
+    width: 100%;
+    border-radius: 50%;
+}
+.name-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+.title, .description{
+    margin: 0;
+}
+.title{
+    line-height: 150%;
+    font-size: var(--heding);
+}
+.description{
+    color: var(--green);
+    line-height: 150%;
+}
+.bio{
+    margin: 0;
+}
+
+.name-location, .biography, .links{
+    width: 100%;
+    text-align: center;
+}
+.field{
+    padding: 12px;
+    background-color: var(--gray);
+    border-radius: var(--radii-links);
+}
+.field:not(:last-child){
+    margin-bottom: 16px;
+}
+.text{
+    margin: 0;
+    font-weight: var(--weight-bold);
+}
+
+
+@media (min-width: 1024px){
+    .card{
+        width: 384px;
+        padding: 40px;
+    }
+    .field:hover{
+        background-color: var(--green);
+        cursor: pointer;
+        color: var(--gray);
+    }
+}
